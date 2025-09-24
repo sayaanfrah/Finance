@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceTech Insights | Professional Market Updates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --secondary: #34a853;
+            --accent: #fbbc05;
+            --dark: #202124;
+            --dark-gray: #3c4043;
+            --light: #f8f9fa;
+            --gray: #5f6368;
+            --light-gray: #dadce0;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --gradient: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+        }
+
+        .dark-mode {
+            --primary: #8ab4f8;
+            --primary-dark: #5e97f6;
+            --secondary: #81c995;
+            --accent: #fdd663;
+            --dark: #e8eaed;
+            --dark-gray: #9aa0a6;
+            --light: #202124;
+            --gray: #9aa0a6;
+            --light-gray: #5f6368;
+            --card-bg: #292a2d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --gradient: linear-gradient(135deg, #8ab4f8 0%, #81c995 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            background: var(--gradient);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover:after {
+            width: 80%;
+            left: 10%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .login-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .login-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .cta-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Featured Posts */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .featured-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .post-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .post-card:hover .post-image img {
+            transform: scale(1.05);
+        }
+
+        .post-content {
+            padding: 25px;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .post-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .post-excerpt {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .post-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Market Data Section */
+        .market-data {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 80px;
+        }
+
+        .market-tickers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .ticker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .ticker.up {
+            border-left: 4px solid var(--secondary);
+        }
+
+        .ticker.down {
+            border-left: 4px solid #ea4335;
+        }
+
+        .ticker-symbol {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .ticker-price {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .ticker-change {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .ticker.up .ticker-change {
+            color: var(--secondary);
+        }
+
+        .ticker.down .ticker-change {
+            color: #ea4335;
+        }
+
+        /* Login Form Styles */
+        .login-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 40px 0;
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+
+        .login-form {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+        }
+
+        .close-login {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--gray);
+            cursor: pointer;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .login-submit {
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-submit:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .error-message {
+            color: #d93025;
+            margin-top: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        /* Dashboard Styles */
+        .dashboard {
+            display: none;
+            padding: 40px 0;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h2 {
+            color: var(--primary);
+        }
+
+        .new-post-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .new-post-btn:hover {
+            background-color: #2e8b47;
+        }
+
+        /* Post Form Styles */
+        .post-form {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            display: none;
+        }
+
+        .post-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .post-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 6px;
+            font-size: 16px;
+            min-height: 200px;
+            resize: vertical;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .cancel-btn {
+            background-color: var(--light-gray);
+            color: var(--dark);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .publish-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Posts Grid */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            padding: 50px 0 30px;
+            margin-top: 80px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            color: var(--dark);
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--light-gray);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 10px;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .featured-posts {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h1>FinanceTech Insights</h1>
+                </div>
+                <nav class="nav-links">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Markets</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Analysis</a>
+                    <a href="#">News</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="login-btn" id="openLogin">
+                        <i class="fas fa-user"></i> Admin Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Professional Financial Intelligence</h2>
+                <p>Daily market insights, tech trends, and investment analysis from industry experts</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary">
+                        <i class="fas fa-play-circle"></i> Watch Market Summary
+                    </button>
+                    <button class="cta-secondary">Latest Reports</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Insights</h2>
+            </div>
+            <div class="featured-posts">
+                <!-- Post 1 -->
+                <div class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Stock Market Analysis">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">MARKET ANALYSIS</span>
+                        <h3 class="post-title">Global Markets React to Federal Reserve Policy Shift</h3>
+                        <p class="post-excerpt">How recent changes in monetary policy are impacting investment strategies across emerging markets.</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-clock"></i> 2 hours ago</span>
+                            <span><i class="far fa-eye"></i> 1.2K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="Cryptocurrency Trends">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">BLOCKCHAIN</span>
+                        <h3 class="post-title">The Future of Digital Assets in Traditional Portfolios</h3>
+                        <p class="post-excerpt">Exploring how institutional investors are incorporating cryptocurrency into diversified investment strategies.</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-clock"></i> 5 hours ago</span>
+                            <span><i class="far fa-eye"></i> 2.4K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI in Finance">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">FINTECH</span>
+                        <h3 class="post-title">AI-Powered Trading Algorithms Outperform Human Analysts</h3>
+                        <p class="post-excerpt">New research shows machine learning models achieving 23% higher returns in volatile market conditions.</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-clock"></i> 1 day ago</span>
+                            <span><i class="far fa-eye"></i> 3.1K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Data Section -->
+    <section class="market-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Live Market Data</h2>
+            </div>
+            <div class="market-data">
+                <div class="market-tickers">
+                    <div class="ticker up">
+                        <div class="ticker-symbol">S&P 500</div>
+                        <div class="ticker-price">4,502.31</div>
+                        <div class="ticker-change"><i class="fas fa-caret-up"></i> +1.24%</div>
+                    </div>
+                    <div class="ticker down">
+                        <div class="ticker-symbol">NASDAQ</div>
+                        <div class="ticker-price">14,113.67</div>
+                        <div class="ticker-change"><i class="fas fa-caret-down"></i> -0.83%</div>
+                    </div>
+                    <div class="ticker up">
+                        <div class="ticker-symbol">DOW JONES</div>
+                        <div class="ticker-price">34,786.72</div>
+                        <div class="ticker-change"><i class="fas fa-caret-up"></i> +0.67%</div>
+                    </div>
+                    <div class="ticker up">
+                        <div class="ticker-symbol">BITCOIN</div>
+                        <div class="ticker-price">$29,452.18</div>
+                        <div class="ticker-change"><i class="fas fa-caret-up"></i> +3.41%</div>
+                    </div>
+                    <div class="ticker down">
+                        <div class="ticker-symbol">GOLD</div>
+                        <div class="ticker-price">$1,932.45</div>
+                        <div class="ticker-change"><i class="fas fa-caret-down"></i> -0.35%</div>
+                    </div>
+                    <div class="ticker up">
+                        <div class="ticker-symbol">OIL (WTI)</div>
+                        <div class="ticker-price">$81.27</div>
+                        <div class="ticker-change"><i class="fas fa-caret-up"></i> +2.11%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <section class="login-container" id="loginSection">
+        <div class="container">
+            <form class="login-form" id="loginForm">
+                <button type="button" class="close-login" id="closeLogin">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2>Admin Login</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="login-submit">Login</button>
+                </div>
+                <div class="error-message" id="errorMessage">
+                    Invalid username or password. Please try again.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard" id="dashboardSection">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Your Finance & Tech Updates</h2>
+                <button class="new-post-btn" id="newPostBtn">
+                    <i class="fas fa-plus"></i> New Post
+                </button>
+            </div>
+
+            <!-- New Post Form -->
+            <div class="post-form" id="postForm">
+                <h3>Create New Post</h3>
+                <textarea id="postContent" placeholder="Write your finance or tech update here..."></textarea>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancelPostBtn">Cancel</button>
+                    <button type="button" class="publish-btn" id="publishPostBtn">Publish</button>
+                </div>
+            </div>
+
+            <!-- Posts Grid -->
+            <div class="posts-grid" id="postsGrid">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h1>FinanceTech Insights</h1>
+                    </div>
+                    <p>Providing professional financial analysis and technology insights since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Investment Strategies</a></li>
+                        <li><a href="#">Tech Innovations</a></li>
+                        <li><a href="#">Economic Calendar</a></li>
+                        <li><a href="#">Research Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Market Data</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@financetech.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Finance District, New York, NY</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FinanceTech Insights. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const themeToggle = document.getElementById('themeToggle');
+        const openLoginBtn = document.getElementById('openLogin');
+        const closeLoginBtn = document.getElementById('closeLogin');
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const loginSection = document.getElementById('loginSection');
+        const dashboardSection = document.getElementById('dashboardSection');
+        const newPostBtn = document.getElementById('newPostBtn');
+        const postForm = document.getElementById('postForm');
+        const cancelPostBtn = document.getElementById('cancelPostBtn');
+        const publishPostBtn = document.getElementById('publishPostBtn');
+        const postContent = document.getElementById('postContent');
+        const postsGrid = document.getElementById('postsGrid');
+
+        // Theme Toggle
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Login Modal Functionality
+        openLoginBtn.addEventListener('click', () => {
+            loginSection.style.display = 'flex';
+        });
+
+        closeLoginBtn.addEventListener('click', () => {
+            loginSection.style.display = 'none';
+            errorMessage.style.display = 'none';
+        });
+
+        // Login Functionality
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Check credentials
+            if (username === 'Sayaan' && password === 'SaNa@3499') {
+                // Successful login
+                loginSection.style.display = 'none';
+                dashboardSection.style.display = 'block';
+                document.querySelector('header').style.display = 'none';
+                document.querySelector('.hero').style.display = 'none';
+                document.querySelector('.featured').style.display = 'none';
+                document.querySelector('.market-section').style.display = 'none';
+                document.querySelector('footer').style.display = 'none';
+                loadPosts();
+            } else {
+                // Show error message
+                errorMessage.style.display = 'block';
+            }
+        });
+
+        // New Post Functionality
+        newPostBtn.addEventListener('click', () => {
+            postForm.style.display = 'block';
+            newPostBtn.style.display = 'none';
+        });
+
+        cancelPostBtn.addEventListener('click', () => {
+            postForm.style.display = 'none';
+            newPostBtn.style.display = 'flex';
+            postContent.value = '';
+        });
+
+        publishPostBtn.addEventListener('click', () => {
+            const content = postContent.value.trim();
+            if (content) {
+                savePost(content);
+                postForm.style.display = 'none';
+                newPostBtn.style.display = 'flex';
+                postContent.value = '';
+                loadPosts();
+            } else {
+                alert('Please enter some content for your post.');
+            }
+        });
+
+        // Save Post to Local Storage
+        function savePost(content) {
+            const posts = JSON.parse(localStorage.getItem('financeTechPosts')) || [];
+            const newPost = {
+                id: Date.now(),
+                content: content,
+                date: new Date().toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
+            };
+            posts.unshift(newPost);
+            localStorage.setItem('financeTechPosts', JSON.stringify(posts));
+        }
+
+        // Load Posts from Local Storage
+        function loadPosts() {
+            const posts = JSON.parse(localStorage.getItem('financeTechPosts')) || [];
+            postsGrid.innerHTML = '';
+            
+            if (posts.length === 0) {
+                postsGrid.innerHTML = '<p>No posts yet. Create your first post!</p>';
+                return;
+            }
+            
+            posts.forEach(post => {
+                const postCard = document.createElement('div');
+                postCard.className = 'post-card';
+                postCard.innerHTML = `
+                    <div class="post-content">
+                        <div class="post-date">${post.date}</div>
+                        <p>${post.content}</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="delete-btn" data-id="${post.id}">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                `;
+                postsGrid.appendChild(postCard);
+            });
+            
+            // Add event listeners to delete buttons
+            document.querySelectorAll('.delete-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const postId = parseInt(this.getAttribute('data-id'));
+                    deletePost(postId);
+                });
+            });
+        }
+
+        // Delete Post
+        function deletePost(postId) {
+            if (confirm('Are you sure you want to delete this post?')) {
+                let posts = JSON.parse(localStorage.getItem('financeTechPosts')) || [];
+                posts = posts.filter(post => post.id !== postId);
+                localStorage.setItem('financeTechPosts', JSON.stringify(posts));
+                loadPosts();
+            }
+        }
+
+        // Check if user is already logged in (for page refresh)
+        window.addEventListener('DOMContentLoaded', () => {
+            // In a real application, you would check for a valid session/token
+            // For this demo, we'll just show the public page
+            loginSection.style.display = 'none';
+            dashboardSection.style.display = 'none';
+            
+            // Add some sample posts for demonstration
+            if (!localStorage.getItem('financeTechPosts')) {
+                const samplePosts = [
+                    {
+                        id: 1,
+                        content: "The Federal Reserve's latest interest rate decision has created significant volatility in bond markets. Investors should consider duration hedging strategies.",
+                        date: "September 15, 2023, 10:30 AM"
+                    },
+                    {
+                        id: 2,
+                        content: "Tech stocks showed resilience despite broader market sell-off. AI and cloud computing sectors continue to outperform traditional tech.",
+                        date: "September 14, 2023, 4:15 PM"
+                    }
+                ];
+                localStorage.setItem('financeTechPosts', JSON.stringify(samplePosts));
+            }
+        });
+    </script>
+</body>
+</html>
